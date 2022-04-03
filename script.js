@@ -39,6 +39,7 @@ const races = [
       {
         name: `BELEZA NATURAL`,
         type: `[P]`,
+        params: ``,
         description: `O Alraune pode realizar um segundo teste de Carisma
         caso tenha falhado no primeiro. Este efeito só pode
         ocorrer uma vez por turno.
@@ -49,6 +50,7 @@ const races = [
       {
         name: `LIGAÇÃO COM A NATUREZA`,
         type: `[P]`,
+        params: ``,
         description: `Sua vida na natureza lhe garantiu diversos
         conhecimentos básicos de sobrevivência, como
         identificar se uma planta ou alimento é venenoso e
@@ -133,19 +135,28 @@ const races = [
 
 const printBonusRace = (dataRace) => {
   const test = document.querySelector(".specRace");
-  test.innerText = `${dataRace[0].name} começam com
+  test.innerText = `${dataRace[0].name} começam com:
   PV: ${dataRace[0].pv}
   PE: ${dataRace[0].pe}
   Dado de Vida: ${dataRace[0].dicePV}
   Dado de Energia: ${dataRace[0].dicePE}
-  Ao criar um Alraune, você deve escolher duas das
-Perícias a seguir e adicionar 1 ponto fixo em cada uma
-na sua ficha: 
-• ${dataRace[0].skills}
-Além disso, você também tem um ponto fixo em um
-dos Atributos a seguir: 
-• ${dataRace[0].attributes}`;
-  // test.appendChild(creteDiv);
+  Ao criar um Alraune, você deve escolher duas das Perícias a seguir e adicionar 1 ponto fixo em cada uma na sua ficha: 
+    • ${dataRace[0].skills}
+  Além disso, você também tem um ponto fixo em um dos Atributos a seguir: 
+    • ${dataRace[0].attributes}
+  E as seguintes habilidades ${dataRace[0].raceSkills[0].name}, ${dataRace[0].raceSkills[1].name} e ${dataRace[0].raceSkills[2].name}
+  
+  ${dataRace[0].raceSkills[0].name} ${dataRace[0].raceSkills[0].type}
+  ${dataRace[0].raceSkills[0].params}
+  ${dataRace[0].raceSkills[0].description}
+
+  ${dataRace[0].raceSkills[1].name} ${dataRace[0].raceSkills[1].type}
+  ${dataRace[0].raceSkills[1].params}
+  ${dataRace[0].raceSkills[1].description}
+  
+  ${dataRace[0].raceSkills[2].name} ${dataRace[0].raceSkills[2].type}
+  ${dataRace[0].raceSkills[2].params}
+  ${dataRace[0].raceSkills[2].description}`;
 };
 
 const getbonusRace = (value) => {
